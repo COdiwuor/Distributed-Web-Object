@@ -6,10 +6,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Test implements CommandLineRunner {
+public class MockTest implements CommandLineRunner {
     private final MockFeignRestClient feignRestClient;
 
-    public Test(MockFeignRestClient feignRestClient) {
+    public MockTest(MockFeignRestClient feignRestClient) {
         this.feignRestClient = feignRestClient;
     }
 
