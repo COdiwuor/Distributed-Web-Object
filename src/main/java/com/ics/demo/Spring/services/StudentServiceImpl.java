@@ -1,5 +1,6 @@
 package com.ics.demo.Spring.services;
 
+import com.ics.demo.NotFoundException;
 import com.ics.demo.Spring.models.Student;
 import com.ics.demo.Spring.repositories.StudentRepository;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,8 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public Student findById(Long id) {
 
-        return studentRepository.findById(id).get();
+        return studentRepository.findById(id).orElseThrow(() ->
+                new NotFoundException(("No student with id" + id + "found")));
     }
 
     @Override
