@@ -46,9 +46,6 @@ public class MockStudent {
     public MockStudent() {
     }
 
-    public interface Create{};
-
-    public interface Update{};
 
 
     @Override
