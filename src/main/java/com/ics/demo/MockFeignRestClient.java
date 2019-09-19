@@ -1,5 +1,6 @@
 package com.ics.demo;
 
+import com.ics.demo.Spring.models.MockAppointment;
 import com.ics.demo.Spring.models.MockLecturer;
 import com.ics.demo.Spring.models.MockStudent;
 import com.ics.demo.Spring.models.University;
@@ -23,5 +24,8 @@ public interface MockFeignRestClient {
 
     @RequestMapping(method = RequestMethod.GET,value = "lecturers")
     List<MockLecturer> viewLecturers();
+
+    @RequestMapping(method = RequestMethod.POST, value = "appointments")
+    MockAppointment createAppointment(@RequestBody MockAppointment mockAppointment);
 
 }

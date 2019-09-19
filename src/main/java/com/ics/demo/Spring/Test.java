@@ -12,10 +12,12 @@ public class Test implements CommandLineRunner {
     private final FeignRestClient feignRestClient;
     private final MockFeignRestClient mockfeignRestClient ;// Declare a feign client
 
+
     public Test(FeignRestClient feignRestClient, MockFeignRestClient mockfeignRestClient) {
         this.feignRestClient = feignRestClient;
         this.mockfeignRestClient = mockfeignRestClient;
     }
+
     @Override
     public void run(String... args) throws Exception {
         RestTemplate restTemplate = new RestTemplate();
