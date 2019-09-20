@@ -1,8 +1,6 @@
 package com.ics.demo.Spring.models;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
 
 public class MockStudent {
