@@ -11,6 +11,7 @@ import java.util.List;
 public class University {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     @NotNull(groups = Update.class)
     @Column(name = "id")
     private Long id;
