@@ -28,5 +28,14 @@ public class MockLecturer {
         this.name = name;
     }
 
+    public MockLecturer() {// empty constructor
+    }
 
+    @Override // generate to .string method
+    public String toString() {
+        return "MockLecturer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

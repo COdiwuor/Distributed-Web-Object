@@ -2,10 +2,15 @@ package com.ics.demo.Spring;
 
 import com.ics.demo.FeignRestClient;
 import com.ics.demo.MockFeignRestClient;
+import com.ics.demo.Spring.models.MockAppointment;
+import com.ics.demo.Spring.models.MockLecturer;
 import com.ics.demo.Spring.models.MockStudent;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
+
+import javax.management.modelmbean.ModelMBean;
+import java.util.List;
 
 @Component
 public class Test implements CommandLineRunner {
@@ -70,6 +75,18 @@ public class Test implements CommandLineRunner {
 
         MockStudent mockStudent= mockfeignRestClient.createMockStudent(new MockStudent("94673","Cyril Owuor"));
         System.out.println("Registered Student"+mockStudent.toString());
+
+        MockStudent searchByName = mockfeignRestClient.searchByName(mockStudent.getStudentNumber());
+        System.out.println("Search returns"+searchByName);
+
+        List<MockLecturer>lecturers = mockfeignRestClient.viewLecturers();
+        System.out.println("Lecturers:"+lecturers);
+
+        MockAppointment mockAppointment = mockfeignRestClient.createAppointment(new MockAppointment(mockStudent.getId(), lecturers.get(0).getId()));
+        System.out.println("Created Appointment"+mockAppointment);
+
+        MockAppointment confirmappointment = mockfeignRestClient.confirmAppointment(mockAppointment.getId(),mockStudent.getId());
+        System.out.println("Appointment confirmed:"+confirmappointment);
 
 
     }
