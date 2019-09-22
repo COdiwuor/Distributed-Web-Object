@@ -33,13 +33,13 @@ public class DummyData implements CommandLineRunner {
         Student student = new Student("Cyril","Odiwuor",strath );
         studentRepository.save(student);
 
-        Student student1=new Student("Trevor", "Mukwaya",Jkuat);
+        Student student1= new Student("Trevor", "Mukwaya",Jkuat);
         studentRepository.save(student1);
 
         Student student2 = new Student ("John ","Doe", Jkuat);
         studentRepository.save(student2);
 
-        Course course =new Course("Application Programming for Internet");
+        Course course = new Course("Application Programming for Internet");
         courseRepository.save(course);
 
         Course course1 = new Course("Distributed Web Object");
