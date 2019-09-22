@@ -28,7 +28,8 @@ public class MockLecturer {
         this.name = name;
     }
 
-    public MockLecturer() {// empty constructor
+    // empty constructor
+    public MockLecturer() {
     }
 
     @Override // generate to .string method
