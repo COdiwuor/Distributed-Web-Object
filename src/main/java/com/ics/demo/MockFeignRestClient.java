@@ -3,7 +3,6 @@ package com.ics.demo;
 import com.ics.demo.Spring.models.MockAppointment;
 import com.ics.demo.Spring.models.MockLecturer;
 import com.ics.demo.Spring.models.MockStudent;
-import com.ics.demo.Spring.models.University;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
