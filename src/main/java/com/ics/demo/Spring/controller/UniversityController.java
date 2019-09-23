@@ -11,11 +11,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "universities")
-
-
 public class UniversityController  {
-
-     private final UniversityService universityService;
+    private final UniversityService universityService;
 
     public UniversityController(UniversityService universityService) {
         this.universityService = universityService;
