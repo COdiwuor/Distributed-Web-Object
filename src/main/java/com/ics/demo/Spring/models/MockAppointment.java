@@ -3,9 +3,7 @@ package com.ics.demo.Spring.models;
 public class MockAppointment {
 
     private Long id;
-
     private Long studentId;
-
     private Long lecturerId;
 
     public MockAppointment(Long studentId, Long lecturerId) {

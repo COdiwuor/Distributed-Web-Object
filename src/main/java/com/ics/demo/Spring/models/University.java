@@ -42,7 +42,6 @@ public class University {
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -50,7 +49,6 @@ public class University {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -58,7 +56,6 @@ public class University {
     public String getLocation() {
         return location;
     }
-
     public void setLocation(String location) {
         this.location = location;
     }
@@ -66,7 +63,6 @@ public class University {
     public String getYearFounded() {
         return yearFounded;
     }
-
     public void setYearFounded(String yearFounded) {
         this.yearFounded = yearFounded;
     }
