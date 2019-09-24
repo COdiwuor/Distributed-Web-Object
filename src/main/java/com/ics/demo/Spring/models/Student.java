@@ -54,7 +54,6 @@ public class Student {
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -62,7 +61,6 @@ public class Student {
     public String getFirst_name() {
         return first_name;
     }
-
     public void setFirst_name(String first_name) {
         this.first_name = first_name;
     }
@@ -70,7 +68,6 @@ public class Student {
     public String getLast_name() {
         return last_name;
     }
-
     public void setLast_name(String last_name) {
         this.last_name = last_name;
     }
@@ -78,7 +75,6 @@ public class Student {
     public String getMiddle_name() {
         return middle_name;
     }
-
     public void setMiddle_name(String middle_name) {
         this.middle_name = middle_name;
     }
@@ -86,7 +82,6 @@ public class Student {
     public String getDob() {
         return dob;
     }
-
     public void setDob(String dob) {
         this.dob = dob;
     }
@@ -94,7 +89,6 @@ public class Student {
     public University getUniversity() {
         return university;
     }
-
     public void setUniversity(University university) {
         this.university = university;
     }
