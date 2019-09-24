@@ -18,9 +18,9 @@ public class Test implements CommandLineRunner {
     private final MockFeignRestClient mockfeignRestClient ;// Declare a feign client
 
 
-    public Test(FeignRestClient feignRestClient, MockFeignRestClient mockfeignRestClient) {
+    public Test(FeignRestClient feignRestClient, MockFeignRestClient mockfeignRestClient, MockFeignRestClient mockfeignRestClient1) {
         this.feignRestClient = feignRestClient;
-        this.mockfeignRestClient = mockfeignRestClient;
+        this.mockfeignRestClient = mockfeignRestClient1;
     }
 
     @Override

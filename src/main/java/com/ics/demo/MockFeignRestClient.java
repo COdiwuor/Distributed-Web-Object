@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name ="student", url="http://10.51.11.230:1000")
+@FeignClient(name ="student", url="http://10.55.11.230:1000")
 public interface MockFeignRestClient {
-
 
     @RequestMapping(method = RequestMethod.POST, value = "students")
     MockStudent createMockStudent(@RequestBody MockStudent mockStudent);
