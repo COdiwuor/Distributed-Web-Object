@@ -72,7 +72,6 @@ public class Test implements CommandLineRunner {
 
 
 
-
         MockStudent mockStudent= mockfeignRestClient.createMockStudent(new MockStudent("94673","Cyril Owuor"));
         System.out.println("Registered Student"+mockStudent.toString());
 
