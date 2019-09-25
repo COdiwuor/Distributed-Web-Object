@@ -1,11 +1,11 @@
 package com.ics.demo.Spring.models;
 
 public class MockLecturer {
-
+    //Private Instance Properties
     private Long id;
     private String name;
 
-
+    //public properties
     public MockLecturer(String name) {
         this.name = name;
     }
