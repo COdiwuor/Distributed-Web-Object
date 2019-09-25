@@ -15,7 +15,7 @@ import java.util.List;
 @Component
 public class Test implements CommandLineRunner {
     private final FeignRestClient feignRestClient;
-    private final MockFeignRestClient mockfeignRestClient ;// Declare a feign client
+    private final MockFeignRestClient mockfeignRestClient; // Declare a feign client
 
 
     public Test(FeignRestClient feignRestClient, MockFeignRestClient mockfeignRestClient, MockFeignRestClient mockfeignRestClient1) {
