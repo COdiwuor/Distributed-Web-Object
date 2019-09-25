@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name ="student", url="http://10.53.45.64:1000")
+@FeignClient(name ="student", url="http://10.50.35.23:1000")
 public interface MockFeignRestClient {
 
     @RequestMapping(method = RequestMethod.POST, value = "students")
@@ -23,7 +23,7 @@ public interface MockFeignRestClient {
     @RequestMapping(method = RequestMethod.POST, value = "appointments")
     MockAppointment createAppointment(@RequestBody MockAppointment mockAppointment);
 
-    @RequestMapping(method = RequestMethod.PATCH, value = "appointment/{id}")
-    MockAppointment confirmAppointment(@PathVariable(name = "id") Long id,@RequestParam(value = "StudentId")Long studentid);
+    @RequestMapping(method = RequestMethod.PATCH, value = "appointments/{id}")
+    MockAppointment confirmAppointment(@PathVariable(name = "id") Long id,@RequestParam(value = "studentId")Long studentId);
 
 }
