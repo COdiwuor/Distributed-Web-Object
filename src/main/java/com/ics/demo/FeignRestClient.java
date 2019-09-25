@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "client", url = "http://10.51.10.111:9090")
+@FeignClient(name = "client", url = "http://10.51.10.111:9090", configuration = FeignConfig.class)
 public interface FeignRestClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "universities")
