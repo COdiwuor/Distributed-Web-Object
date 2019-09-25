@@ -81,7 +81,8 @@ public class Test implements CommandLineRunner {
         List<MockLecturer>lecturers = mockfeignRestClient.viewLecturers();
         System.out.println("Lecturers:"+lecturers);
 
-        MockAppointment mockAppointment = mockfeignRestClient.createAppointment(new MockAppointment(mockStudent.getId(), lecturers.get(0).getId()));
+        MockAppointment mockAppointment1 = new MockAppointment(mockStudent.getId(), lecturers.get(0).getId());
+        MockAppointment mockAppointment = mockfeignRestClient.createAppointment(mockAppointment1);
         System.out.println("Created Appointment"+mockAppointment);
 
         MockAppointment confirmappointment = mockfeignRestClient.confirmAppointment(mockAppointment.getId(),mockStudent.getId());

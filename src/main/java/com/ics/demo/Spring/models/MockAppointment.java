@@ -4,16 +4,17 @@ public class MockAppointment {
 
     private Long id;
     private Long studentId;
-    private Long lecturerId;
+    private Long teacherId;
 
-    public MockAppointment(Long studentId, Long lecturerId) {
+    public MockAppointment(Long studentId, Long teacherId) {
         this.studentId = studentId;
-        this.lecturerId = lecturerId;
+        this.teacherId = teacherId;
     }
 
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -21,15 +22,17 @@ public class MockAppointment {
     public Long getStudentId() {
         return studentId;
     }
+
     public void setStudentId(Long studentId) {
         this.studentId = studentId;
     }
 
-    public Long getLecturerId() {
-        return lecturerId;
+    public Long getTeacherId() {
+        return teacherId;
     }
-    public void setLecturerId(Long lecturerId) {
-        this.lecturerId = lecturerId;
+
+    public void setTeacherId(Long teacherId) {
+        this.teacherId = teacherId;
     }
 
     public MockAppointment() {
@@ -40,7 +43,9 @@ public class MockAppointment {
         return "MockAppointment{" +
                 "id=" + id +
                 ", studentId=" + studentId +
-                ", lecturerId=" + lecturerId +
+                ", teacherId=" + teacherId +
                 '}';
     }
 }
+
+
