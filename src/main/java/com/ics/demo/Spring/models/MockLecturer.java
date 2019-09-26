@@ -27,8 +27,8 @@ public class MockLecturer {
     // empty constructor
     public MockLecturer() {
     }
-
-    @Override // generate to .string method
+    // generate toString method
+    @Override
     public String toString() {
         return "MockLecturer{" +
                 "id=" + id +

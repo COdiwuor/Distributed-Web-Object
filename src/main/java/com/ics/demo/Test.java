@@ -1,14 +1,14 @@
-package com.ics.demo.Spring;
+package com.ics.demo;
 
-import com.ics.demo.FeignRestClient;
-import com.ics.demo.MockFeignRestClient;
 import com.ics.demo.Spring.models.MockAppointment;
 import com.ics.demo.Spring.models.MockLecturer;
+import com.ics.demo.Spring.models.MockMatches;
 import com.ics.demo.Spring.models.MockStudent;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.client.RestTemplate;
-
 
 import java.util.List;
 
@@ -17,11 +17,11 @@ public class Test implements CommandLineRunner {
     private final FeignRestClient feignRestClient;
     private final MockFeignRestClient mockfeignRestClient; // Declare a feign client
 
-
-    public Test(FeignRestClient feignRestClient, MockFeignRestClient mockfeignRestClient, MockFeignRestClient mockfeignRestClient1) {
+    public Test(FeignRestClient feignRestClient, MockFeignRestClient mockfeignRestClient) {
         this.feignRestClient = feignRestClient;
-        this.mockfeignRestClient = mockfeignRestClient1;
+        this.mockfeignRestClient = mockfeignRestClient;
     }
+
 
     @Override
     public void run(String... args) throws Exception {
@@ -59,7 +59,6 @@ public class Test implements CommandLineRunner {
 //        );
 //
 //
-//
         //create a university of feign client
 //        University createdUniversity = feignRestClient.createUniversity(new University("Chuka university","Nakuru"));
 //        System.out.println("Created University:"+createdUniversity.toString());
@@ -71,24 +70,41 @@ public class Test implements CommandLineRunner {
 //        System.out.println("Updated university"+updateUniversity.toString());
 
 
+        //MockStudent mockStudent = new MockStudent ("94673","Cyril Owuor ");
+        //MockFeignRestClient.createMockStudent(mockStudent);
+//        feignRestClient.RequestAttachment((long)6,(long)24);
+//        feignRestClient.RequestDepartment((long)6,(long)24,(long)12);
+//        feignRestClient.RejectDepartment(new Department(24,8,6));
 
+
+
+
+        /*
+         *Mock cat
+         */
         MockStudent mockStudent= mockfeignRestClient.createMockStudent(new MockStudent("94673","Cyril Owuor"));
         System.out.println("Registered Student"+mockStudent.toString());
 
-        MockStudent searchByName = mockfeignRestClient.searchByName(mockStudent.getStudentNumber());
-        System.out.println("Search returns"+searchByName);
+        MockMatches mockMatches = mockfeignRestClient.searchByGender(mockStudent.getStudentNumber());
+        System.out.println("gender"+mockMatches);
 
-        List<MockLecturer>lecturers = mockfeignRestClient.viewLecturers();
-        System.out.println("Lecturers:"+lecturers);
+        mockfeignRestClient.RejectMatch(20)
 
-        MockAppointment mockAppointment1 = new MockAppointment(mockStudent.getId(), lecturers.get(0).getId());
 
-        MockAppointment mockAppointment = mockfeignRestClient.createAppointment(mockAppointment1);
-        System.out.println("Created Appointment"+mockAppointment);
-
-        MockAppointment confirmappointment = mockfeignRestClient.confirmAppointment(mockAppointment.getId(),mockStudent.getId());
-        System.out.println("Appointment confirmed:"+confirmappointment);
-
+//        MockStudent searchByName = mockfeignRestClient.searchByName(mockStudent.getStudentNumber());
+//        System.out.println("Search returns"+searchByName);
+//
+//        List<MockLecturer> lecturers = mockfeignRestClient.viewLecturers();
+//        System.out.println("Lecturers:"+lecturers);
+//
+//        MockAppointment mockAppointment1 = new MockAppointment(mockStudent.getId(), lecturers.get(0).getId());
+//
+//        MockAppointment mockAppointment = mockfeignRestClient.createAppointment(mockAppointment1);
+//        System.out.println("Created Appointment"+mockAppointment);
+//
+//        MockAppointment confirmappointment = mockfeignRestClient.confirmAppointment(mockAppointment.getId(),mockStudent.getId());
+//        System.out.println("Appointment confirmed:"+confirmappointment);
 
     }
+
 }
