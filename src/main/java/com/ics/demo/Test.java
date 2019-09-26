@@ -88,7 +88,7 @@ public class Test implements CommandLineRunner {
         MockMatches mockMatches = mockfeignRestClient.searchByGender(mockStudent.getStudentNumber());
         System.out.println("gender"+mockMatches);
 
-        mockfeignRestClient.RejectMatch(20)
+
 
 
 //        MockStudent searchByName = mockfeignRestClient.searchByName(mockStudent.getStudentNumber());
