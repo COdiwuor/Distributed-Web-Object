@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name ="student", url="http://10.51.10.111:2200",configuration = FeignConfig.class )
+@FeignClient(name ="users", url="https://springbootapi.herokuapp.com",configuration = FeignConfig.class )
 public interface MockFeignRestClient {
 
     /*
@@ -17,7 +17,7 @@ public interface MockFeignRestClient {
      */
 
     //Register a student
-    @RequestMapping(method = RequestMethod.POST, value = "students")
+    @RequestMapping(method = RequestMethod.POST, value = "users")
     MockStudent createMockStudent(@RequestBody MockStudent mockStudent);
 
     //Return a student
@@ -47,6 +47,8 @@ public interface MockFeignRestClient {
 
     @RequestMapping(method = RequestMethod.PATCH, value = "matches")
     MockMatches RejectMatch(@PathVariable(value = "Blind Date/{id}") Long id );
+
+
 
 
 

@@ -3,19 +3,28 @@ package com.ics.demo.Spring.controller;
 
 import com.ics.demo.Spring.models.Student;
 import com.ics.demo.Spring.models.University;
+import com.ics.demo.Spring.services.StudentService;
 import com.ics.demo.Spring.services.UniversityService;
+import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "universities")
+@RequestMapping(value = "universities",
+produces = {
+        MediaType.APPLICATION_XML_VALUE,
+        MediaType.APPLICATION_JSON_VALUE
+})
+
 public class UniversityController  {
     private final UniversityService universityService;
+    private final StudentService studentService;
 
-    public UniversityController(UniversityService universityService) {
+    public UniversityController(UniversityService universityService, StudentService studentService) {
         this.universityService = universityService;
+        this.studentService = studentService;
     }
     @GetMapping
     public List<University>findAll(){

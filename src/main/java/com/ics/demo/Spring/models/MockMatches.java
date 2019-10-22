@@ -3,12 +3,11 @@ package com.ics.demo.Spring.models;
 public class MockMatches {
 
     private Long id;
-    private String MALE;
-    private String FEMALE;
+    private String name;
+    private String gender;
+    private String description;
 
-    public MockMatches(String MALE, String FEMALE) {
-        this.MALE = MALE;
-        this.FEMALE = FEMALE;
+    public MockMatches() {
     }
 
     public Long getId() {
@@ -19,31 +18,37 @@ public class MockMatches {
         this.id = id;
     }
 
-    public String getMALE() {
-        return MALE;
+    public String getName() {
+        return name;
     }
 
-    public void setMALE(String MALE) {
-        this.MALE = MALE;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getFEMALE() {
-        return FEMALE;
+    public String getGender() {
+        return gender;
     }
 
-    public void setFEMALE(String FEMALE) {
-        this.FEMALE = FEMALE;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public MockMatches() {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
     public String toString() {
         return "MockMatches{" +
                 "id=" + id +
-                ", MALE='" + MALE + '\'' +
-                ", FEMALE='" + FEMALE + '\'' +
+                ", name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

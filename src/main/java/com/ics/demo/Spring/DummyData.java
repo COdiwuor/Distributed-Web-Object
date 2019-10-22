@@ -32,6 +32,7 @@ public class DummyData implements CommandLineRunner {
 
         Student student = new Student("Cyril","Odiwuor",strath );
         studentRepository.save(student);
+        System.out.println(student);
 
         Student student1= new Student("Trevor", "Mukwaya",Jkuat);
         studentRepository.save(student1);

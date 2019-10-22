@@ -42,8 +42,7 @@ public class Test implements CommandLineRunner {
 //        List<University> universities = response.getBody();
 //        System.out.println(universities);
 //
-//        universities=feignRestClient.getAllUniversities();
-//        System.out.println("Feign Universities:"+universities.toString());
+//
 //
 //
 //        University university = restTemplate.getForObject(
@@ -81,13 +80,13 @@ public class Test implements CommandLineRunner {
 
         /*
          *Cat1
-         */
-        MockStudent mockStudent= mockfeignRestClient.createMockStudent(new MockStudent("94673","Cyril Owuor"));
-        System.out.println("Registered Student"+mockStudent.toString());
-
-        MockMatches mockMatches = mockfeignRestClient.searchByGender(mockStudent.getStudentNumber());
-        System.out.println("gender"+mockMatches);
-
+//         */
+//        MockStudent mockStudent= mockfeignRestClient.createMockStudent(new MockStudent("94673","Cyril Owuor"));
+//        System.out.println("Registered Student"+mockStudent.toString());
+//
+//        MockMatches mockMatches = mockfeignRestClient.searchByGender(mockStudent.getStudentNumber());
+//        System.out.println("gender"+mockMatches);
+//
 
 
 
