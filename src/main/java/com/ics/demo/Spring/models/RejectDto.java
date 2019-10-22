@@ -20,4 +20,11 @@ public class RejectDto {
         return reason;
     }
 
+    @Override
+    public String toString() {
+        return "RejectDto{" +
+                "StudentId=" + StudentId +
+                ", reason='" + reason + '\'' +
+                '}';
+    }
 }
